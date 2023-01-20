@@ -1,11 +1,10 @@
 $spaces: (
-  xsmall: 8,
-  small: 12,
-  base: 16,
-  medium: 24,
-  large: 48,
-  xlarge: 72,
-  xxlarge: 108,
+  xsmall: 6,
+  small: 10,
+  base: 12,
+  medium: 14,
+  large: 30,
+  xlarge: 70,
 );
 
 @function space($space) {
