@@ -1,0 +1,33 @@
+$colors: (
+  light: (
+    // base: #fff,
+    // light: #e8eaed,
+    dark: #616161,
+  ),
+  dark: (
+    // base: #000,
+    // darker: #171717,
+    // dark: #202124,
+    // light: #303134,,,
+  ),
+);
+
+@function color($color, $mod: base) {
+  $color-palette: map-get($colors, $color);
+
+  @if $color-palette == null {
+    @error '(#{$color}) does not exist on $colors';
+  }
+
+  @if type-of($color-palette) == map {
+    $color-mod: map-get($color-palette, $mod);
+
+    @if $color-mod == null {
+      @error '(#{$color}, #{$mod}) does not exist on $colors';
+    }
+
+    @return $color-mod;
+  }
+
+  @return $color-palette;
+}
