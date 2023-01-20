@@ -2,13 +2,29 @@
 
 $sizes: (
   small: 12,
-  base: 16,
-  large: 20,
-  xlarge: 24,
-  xxlarge: 28,
-  huge: 48,
+  base: 13,
+  large: 15,
+  xlarge: 18,
+  xxlarge: 27,
+);
+
+$heights: (
+  small: 20,
+  base: 21,
+  large: 24,
+  xlarge: 29,
+  xxlarge: 44,
 );
 
 @function font-size($size) {
   @return #{map-get($sizes, $size)}px;
+}
+
+@function line-height($size) {
+  @return #{map-get($heights, $size)}px;
+}
+
+@mixin font($size) {
+  font-size: font-size($size);
+  line-height: line-height($size);
 }
