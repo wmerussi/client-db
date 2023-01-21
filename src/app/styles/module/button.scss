@@ -1,4 +1,6 @@
 .button {
+  @include font(large);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,6 +11,10 @@
   border-radius: border-radius(round);
   color: color(light);
   text-transform: uppercase;
+
+  &:active {
+    opacity: 0.8;
+  }
 
   &__image {
     margin-right: 2px;

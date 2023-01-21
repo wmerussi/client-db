@@ -1,4 +1,8 @@
-<button class="button" [ngClass]="buttonClass()">
+<button 
+  [ngClass]="buttonClass()"
+  class="button"
+  tabindex="0"
+>
   <img 
     *ngIf="type === 'new'"
     class="button__image"
