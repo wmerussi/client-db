@@ -6,8 +6,10 @@
 
   <ul class="client-list">
     <li class="client-list__item">
-      <app-client-info [clientInfo]="clientInfo" />
-      <app-client-info [clientInfo]="clientInfo" />
+      <app-client-info
+        *ngFor="let clientInfo of clientList"
+        [clientInfo]="clientInfo"
+      />
     </li>
   </ul>
 </div>

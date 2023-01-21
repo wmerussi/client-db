@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ClientInfoComponent } from './client-info/client-info.component';
 import { ClientListComponent } from './client-list/client-list.component';
@@ -17,7 +18,7 @@ import { ButtonComponent } from './button/button.component';
     MainHeaderComponent,
     StatusComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   exports: [
     ButtonComponent,
     ClientListComponent,
