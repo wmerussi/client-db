@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { StatusComponent } from './status/status.component';
 import { ButtonComponent } from './button/button.component';
+import { CNPJPipe } from '../pipes/cnpj.pipe';
 
 @NgModule({
   declarations: [
     ButtonComponent,
     ClientListComponent,
     ClientInfoComponent,
+    CNPJPipe,
     HomeComponent,
     MainHeaderComponent,
     StatusComponent,
@@ -23,6 +25,7 @@ import { ButtonComponent } from './button/button.component';
     ButtonComponent,
     ClientListComponent,
     ClientInfoComponent,
+    CNPJPipe,
     HomeComponent,
     MainHeaderComponent,
     StatusComponent,
