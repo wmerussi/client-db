@@ -1,5 +1,7 @@
 .client-info {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 
   padding: space(base);
@@ -7,7 +9,7 @@
 
   &__field {
     & + & {
-      margin-left: space(medium);
+      margin-top: space(xsmall);
     }
   }
 
@@ -15,22 +17,65 @@
     @include font(xlarge);
 
     display: inline-block;
-    width: 260px;
+    width: 100%;
+
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__cnpj {
     @include font(small);
-
-    flex: 10;
   }
 
-  &__status {
-    width: 200px;
+  &__action {
+    width: 100%;
   }
 
   &__loader {
     @include skeleton();
 
-    height: 58px;
+    height: 146px;
+  }
+
+  @include media(tablet) {
+    flex-direction: row;
+
+    &__field {
+      & + & {
+        margin: {
+          top: 0;
+          left: space(medium);
+        }
+      }
+    }
+
+    &__name {
+      width: 260px;
+      text-align: left;
+    }
+
+    &__cnpj {
+      flex: 10;
+    }
+
+    &__status {
+      width: 100px;
+    }
+
+    &__action {
+      width: auto;
+    }
+
+    &__loader {
+      height: 58px;
+    }
+  }
+
+  @include media(desktop) {
+    &__status {
+      width: 200px;
+    }
   }
 }

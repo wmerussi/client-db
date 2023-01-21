@@ -6,7 +6,7 @@
   align-items: center;
 
   &__square {
-    width: 90px;
+    width: 100%;
     height: 34px;
 
     border-radius: border-radius(round);
@@ -41,5 +41,11 @@
 
   &__save {
     background-color: color(success);
+  }
+
+  @include media(tablet) {
+    &__square {
+      width: 90px;
+    }
   }
 }

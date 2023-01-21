@@ -1,13 +1,13 @@
 .client-list {
   &__wrapper {
     padding: {
-      top: space(xxlarge);
+      top: space(large);
       bottom: space(xxlarge);
     }
   }
 
   &__header {
-    @include font(xxlarge);
+    @include font(xlarge);
 
     display: flex;
     margin-bottom: space(xlarge);
@@ -36,9 +36,18 @@
     position: fixed;
     right: space(large);
     bottom: space(large);
+    z-index: 9;
   }
 
   @include media(tablet) {
+    &__wrapper {
+      padding-top: space(xxlarge);
+    }
+
+    &__header {
+      @include font(xxlarge);
+    }
+
     &__add-button {
       position: initial;
     }
