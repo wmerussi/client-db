@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ClientInfoComponent } from './client-info/client-info.component';
 import { ClientListComponent } from './client-list/client-list.component';
-import { HomeComponent } from './home/home.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { StatusComponent } from './status/status.component';
 import { ButtonComponent } from './button/button.component';
@@ -17,7 +16,6 @@ import { InfoMessageComponent } from './info-message/info-message.component';
     ClientListComponent,
     ClientInfoComponent,
     CNPJPipe,
-    HomeComponent,
     InfoMessageComponent,
     MainHeaderComponent,
     StatusComponent,
@@ -28,7 +26,6 @@ import { InfoMessageComponent } from './info-message/info-message.component';
     ClientListComponent,
     ClientInfoComponent,
     CNPJPipe,
-    HomeComponent,
     InfoMessageComponent,
     MainHeaderComponent,
     StatusComponent,
