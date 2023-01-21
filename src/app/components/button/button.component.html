@@ -1,0 +1,10 @@
+<button class="button" [ngClass]="buttonClass()">
+  <img 
+    *ngIf="type === 'new'"
+    class="button__image"
+    src="assets/plus.svg"
+    alt=""
+  >
+
+  <ng-content />
+</button>

@@ -6,9 +6,11 @@ import { ClientListComponent } from './client-list/client-list.component';
 import { HomeComponent } from './home/home.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { StatusComponent } from './status/status.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
+    ButtonComponent,
     ClientListComponent,
     ClientInfoComponent,
     HomeComponent,
@@ -17,6 +19,7 @@ import { StatusComponent } from './status/status.component';
   ],
   imports: [CommonModule],
   exports: [
+    ButtonComponent,
     ClientListComponent,
     ClientInfoComponent,
     HomeComponent,

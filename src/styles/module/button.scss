@@ -1,0 +1,28 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 90px;
+  height: 34px;
+
+  border-radius: border-radius(round);
+  color: color(light);
+  text-transform: uppercase;
+
+  &__image {
+    margin-right: 2px;
+  }
+
+  &__new {
+    background-color: color(info);
+  }
+
+  &__edit {
+    background-color: color(alert);
+  }
+
+  &__save {
+    background-color: color(success);
+  }
+}
