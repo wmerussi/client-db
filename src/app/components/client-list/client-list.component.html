@@ -14,4 +14,9 @@
       <app-client-info [clientInfo]="clientInfo" />
     </li>
   </ul>
+
+  <span
+    *ngIf="!!clientCount"
+    class="client-list__info"
+  >Exibindo {{ clientCount }} de {{ clientCount }} clientes</span>
 </div>

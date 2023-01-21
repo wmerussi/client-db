@@ -27,4 +27,11 @@
       margin-top: space(small);
     }
   }
+
+  &__info {
+    @include font(base);
+
+    display: block;
+    margin-top: space(large);
+  }
 }

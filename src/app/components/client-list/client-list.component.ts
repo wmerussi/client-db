@@ -7,7 +7,7 @@ import { ClientService } from 'src/app/services/client.service';
   templateUrl: './client-list.component.html',
 })
 export class ClientListComponent {
-  public clientList: ClientInfo[] | undefined;
+  public clientList: ClientInfo[] = [];
 
   constructor(private client: ClientService) {}
 
@@ -17,5 +17,9 @@ export class ClientListComponent {
         this.clientList = clientList;
       },
     });
+  }
+
+  get clientCount(): number {
+    return this.clientList.length;
   }
 }
