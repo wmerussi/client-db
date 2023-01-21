@@ -8,5 +8,7 @@
 }
 
 @mixin skeleton() {
+  background-color: color(dark, light);
+  opacity: 0.5;
   animation: skeleton-loading 1s linear infinite alternate;
 }

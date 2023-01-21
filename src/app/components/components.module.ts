@@ -10,6 +10,7 @@ import { StatusComponent } from './status/status.component';
 import { ButtonComponent } from './button/button.component';
 import { CNPJPipe } from '../pipes/cnpj.pipe';
 import { ClientInfoLoaderComponent } from './client-info-loader/client-info-loader.component';
+import { InfoMessageComponent } from './info-message/info-message.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ClientInfoLoaderComponent } from './client-info-loader/client-info-load
     ClientInfoLoaderComponent,
     CNPJPipe,
     HomeComponent,
+    InfoMessageComponent,
     MainHeaderComponent,
     StatusComponent,
   ],
@@ -30,6 +32,7 @@ import { ClientInfoLoaderComponent } from './client-info-loader/client-info-load
     ClientInfoLoaderComponent,
     CNPJPipe,
     HomeComponent,
+    InfoMessageComponent,
     MainHeaderComponent,
     StatusComponent,
   ],

@@ -15,8 +15,7 @@
     </li>
   </ul>
 
-  <span
-    *ngIf="hasResult"
-    class="client-list__info"
-  >Exibindo {{ clientCount }} de {{ clientCount }} clientes</span>
+  <div class="client-list__message">
+    <app-info-message text="Exibindo {{ clientCount }} de {{ clientCount }} clientes" />
+  </div>
 </div>

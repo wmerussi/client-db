@@ -1,0 +1,5 @@
+<div *ngIf="isLoading | async; else content" class="info-message__loader"></div>
+
+<ng-template #content>
+  <span class="info-message">{{ text }}</span>
+</ng-template>

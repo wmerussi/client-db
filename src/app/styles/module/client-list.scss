@@ -28,10 +28,7 @@
     }
   }
 
-  &__info {
-    @include font(base);
-
-    display: block;
+  &__message {
     margin-top: space(large);
   }
 }

@@ -1,0 +1,10 @@
+.info-message {
+  @include font(base);
+
+  &__loader {
+    @include skeleton();
+
+    height: 21px;
+    width: 150px;
+  }
+}
