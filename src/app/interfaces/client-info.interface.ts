@@ -1,4 +1,4 @@
-import { Status } from '../enums/status.enum';
+import { Status } from '../type/status.type';
 
 export interface ClientInfo {
   id?: number;

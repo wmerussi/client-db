@@ -7,9 +7,9 @@
     clientInfo?.cnpj
   }}</span>
 
-  <span class="client-info__field client-info__status">{{
-    clientInfo?.status
-  }}</span>
+  <span class="client-info__field client-info__status">
+    <app-status [status]="clientInfo?.status" />
+  </span>
 
   <button class="client-info__field">EDITAR</button>
 </div>

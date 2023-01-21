@@ -1,0 +1,26 @@
+.status {
+  @include font(base);
+
+  display: flex;
+  align-items: center;
+
+  &:before {
+    margin-right: space(xsmall);
+    width: 14px;
+    height: 14px;
+    border-radius: border-radius(circle);
+    content: "";
+  }
+
+  &__active {
+    &:before {
+      background-color: color(success);
+    }
+  }
+
+  &__inactive {
+    &:before {
+      background-color: color(danger);
+    }
+  }
+}
