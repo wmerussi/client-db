@@ -3,8 +3,9 @@ $spaces: (
   small: 10,
   base: 12,
   medium: 14,
-  large: 30,
-  xlarge: 70,
+  large: 20,
+  xlarge: 30,
+  xxlarge: 70,
 );
 
 @function space($space) {

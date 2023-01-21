@@ -1,0 +1,30 @@
+.client-info {
+  display: flex;
+  align-items: center;
+
+  padding: space(base);
+  background-color: color(light);
+
+  &__field {
+    & + & {
+      margin-left: space(medium);
+    }
+  }
+
+  &__name {
+    @include font(xlarge);
+
+    display: inline-block;
+    width: 260px;
+  }
+
+  &__cnpj {
+    @include font(small);
+
+    flex: 10;
+  }
+
+  &__status {
+    width: 200px;
+  }
+}
