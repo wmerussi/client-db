@@ -1,0 +1,7 @@
+.client-info-loader {
+  @include skeleton();
+
+  height: 58px;
+  background-color: color(dark, light);
+  opacity: 0.5;
+}

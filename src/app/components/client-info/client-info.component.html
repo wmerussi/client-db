@@ -1,17 +1,21 @@
-<div class="client-info">
-  <span class="client-info__field client-info__name">{{
-    clientInfo?.name
-  }}</span>
+<app-client-info-loader *ngIf="isLoading | async; else content" />
 
-  <span class="client-info__field client-info__cnpj">{{
-    clientInfo?.cnpj | cnpj
-  }}</span>
+<ng-template #content>
+  <div class="client-info">
+    <span class="client-info__field client-info__name">{{
+      clientInfo?.name
+    }}</span>
 
-  <span class="client-info__field client-info__status">
-    <app-status [status]="clientInfo?.status" />
-  </span>
+    <span class="client-info__field client-info__cnpj">{{
+      clientInfo?.cnpj | cnpj
+    }}</span>
 
-  <div class="client-info__field">
-    <app-button type="edit">Editar</app-button>
+    <span class="client-info__field client-info__status">
+      <app-status [status]="clientInfo?.status" />
+    </span>
+
+    <div class="client-info__field">
+      <app-button type="edit">Editar</app-button>
+    </div>
   </div>
-</div>
+</ng-template>
