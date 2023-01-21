@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { StyleClass } from 'src/app/interfaces/style-class.interface';
 import { Status } from 'src/app/type/status.type';
 
 @Component({
@@ -8,7 +9,7 @@ import { Status } from 'src/app/type/status.type';
 export class StatusComponent {
   @Input() status: Status | undefined;
 
-  statusClass() {
+  statusClass(): StyleClass {
     return {
       status__active: this.status === 'Ativo',
       status__inactive: this.status === 'Inativo',

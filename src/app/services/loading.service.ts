@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class LoadingService {
-  public loading = new BehaviorSubject<boolean>(false);
+  private loading = new BehaviorSubject<boolean>(false);
   public isLoading = this.loading.asObservable();
 
   show() {

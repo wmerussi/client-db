@@ -3,11 +3,19 @@
     <img src="assets/person.svg" alt="" />
     <h1 class="client-list__heading">Listagem de Clientes</h1>
 
-    <app-button type="new">Novo</app-button>
+    <div class="client-list__add-button">
+      <app-button
+        role="new"
+        icon="plus"
+        ariaLabel="Adicionar um novo cliente"
+        [type]="isMobile ? 'round' : 'square'"
+        [iconOnly]="isMobile"
+      >Novo</app-button>
+    </div>
   </header>
 
   <ul class="client-list">
-    <li 
+    <li
       *ngFor="let clientInfo of clientList"
       class="client-list__item"
     >

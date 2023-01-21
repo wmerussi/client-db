@@ -31,4 +31,16 @@
   &__message {
     margin-top: space(large);
   }
+
+  &__add-button {
+    position: fixed;
+    right: space(large);
+    bottom: space(large);
+  }
+
+  @include media(tablet) {
+    &__add-button {
+      position: initial;
+    }
+  }
 }
