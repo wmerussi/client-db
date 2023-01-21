@@ -1,4 +1,4 @@
-<app-client-info-loader *ngIf="isLoading | async; else content" />
+<div class="client-info__loader" *ngIf="isLoading | async; else content"></div>
 
 <ng-template #content>
   <div class="client-info">

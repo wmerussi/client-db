@@ -9,7 +9,6 @@ import { MainHeaderComponent } from './main-header/main-header.component';
 import { StatusComponent } from './status/status.component';
 import { ButtonComponent } from './button/button.component';
 import { CNPJPipe } from '../pipes/cnpj.pipe';
-import { ClientInfoLoaderComponent } from './client-info-loader/client-info-loader.component';
 import { InfoMessageComponent } from './info-message/info-message.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { InfoMessageComponent } from './info-message/info-message.component';
     ButtonComponent,
     ClientListComponent,
     ClientInfoComponent,
-    ClientInfoLoaderComponent,
     CNPJPipe,
     HomeComponent,
     InfoMessageComponent,
@@ -29,7 +27,6 @@ import { InfoMessageComponent } from './info-message/info-message.component';
     ButtonComponent,
     ClientListComponent,
     ClientInfoComponent,
-    ClientInfoLoaderComponent,
     CNPJPipe,
     HomeComponent,
     InfoMessageComponent,
