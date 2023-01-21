@@ -1,17 +1,17 @@
-$container-size: 900px;
+$container-size: 1034px;
 
 .container {
   margin: 0 auto;
 
   padding: {
-    left: space(small);
-    right: space(small);
+    left: space(medium);
+    right: space(medium);
   }
 
   @include media(tablet) {
     padding: {
-      left: space(medium);
-      right: space(medium);
+      left: space(xlarge);
+      right: space(xlarge);
     }
   }
 

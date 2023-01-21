@@ -1,0 +1,19 @@
+.client-list {
+  &__wrapper {
+    padding: {
+      top: space(xxlarge);
+      bottom: space(xxlarge);
+    }
+  }
+
+  &__header {
+    @include font(xxlarge);
+
+    display: flex;
+    border-bottom: 1px solid color(light, darker);
+  }
+
+  &__heading {
+    margin-left: space(base);
+  }
+}
