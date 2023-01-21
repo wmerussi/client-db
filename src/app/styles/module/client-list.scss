@@ -10,10 +10,17 @@
     @include font(xxlarge);
 
     display: flex;
+    margin-bottom: space(xlarge);
     border-bottom: 1px solid color(light, darker);
   }
 
   &__heading {
     margin-left: space(base);
+  }
+
+  &__item {
+    & + & {
+      margin-top: space(small);
+    }
   }
 }
