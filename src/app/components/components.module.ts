@@ -10,10 +10,12 @@ import { ButtonComponent } from './button/button.component';
 import { CNPJPipe } from '../pipes/cnpj.pipe';
 import { InfoMessageComponent } from './info-message/info-message.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
+import { ClientFormComponent } from './client-form/client-form.component';
 
 @NgModule({
   declarations: [
     ButtonComponent,
+    ClientFormComponent,
     ClientListComponent,
     ClientInfoComponent,
     CNPJPipe,
@@ -25,6 +27,7 @@ import { PageHeaderComponent } from './page-header/page-header.component';
   imports: [CommonModule, HttpClientModule],
   exports: [
     ButtonComponent,
+    ClientFormComponent,
     ClientListComponent,
     ClientInfoComponent,
     CNPJPipe,

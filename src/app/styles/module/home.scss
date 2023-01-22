@@ -1,9 +1,4 @@
 .home {
-  padding: {
-    top: space(large);
-    bottom: space(xxlarge);
-  }
-
   &__add-button {
     position: fixed;
     right: space(large);
@@ -12,8 +7,6 @@
   }
 
   @include media(tablet) {
-    padding-top: space(xxlarge);
-
     &__add-button {
       position: initial;
     }

@@ -1,0 +1,14 @@
+.app {
+  &__content {
+    padding: {
+      top: space(large);
+      bottom: space(xxlarge);
+    }
+  }
+
+  @include media(tablet) {
+    &__content {
+      padding-top: space(xxlarge);
+    }
+  }
+}
