@@ -16,6 +16,7 @@ import { SelectComponent } from './select/select.component';
 import { IconComponent } from './icon/icon.component';
 import { ModalComponent } from './modal/modal.component';
 import { CnpjMaskDirective } from '../directives/cnpj-mask.directive';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { CnpjMaskDirective } from '../directives/cnpj-mask.directive';
     SelectComponent,
     StatusComponent,
   ],
-  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
+  imports: [CommonModule, HttpClientModule, ReactiveFormsModule, RouterModule],
   exports: [
     ButtonComponent,
     ClientFormComponent,
