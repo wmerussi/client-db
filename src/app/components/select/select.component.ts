@@ -1,7 +1,9 @@
 import {
   Component,
   ElementRef,
+  EventEmitter,
   Input,
+  Output,
   Renderer2,
   ViewChild,
 } from '@angular/core';
@@ -14,6 +16,7 @@ import { StyleClass } from 'src/app/interfaces/style-class.interface';
 })
 export class SelectComponent {
   @Input() values: string[] = [];
+  @Output() onSelect: EventEmitter<string> = new EventEmitter<string>();
 
   @ViewChild('select') selectEl: ElementRef | undefined;
 
@@ -47,6 +50,8 @@ export class SelectComponent {
   selectValue(value: string) {
     this.selectedValue = value;
     this.selectEl?.nativeElement.focus();
+
+    this.onSelect.emit(this.selectedValue);
   }
 
   selectClass(): StyleClass {

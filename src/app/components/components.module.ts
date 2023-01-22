@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ClientInfoComponent } from './client-info/client-info.component';
@@ -12,6 +13,7 @@ import { InfoMessageComponent } from './info-message/info-message.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { ClientFormComponent } from './client-form/client-form.component';
 import { SelectComponent } from './select/select.component';
+import { IconComponent } from './icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -20,19 +22,21 @@ import { SelectComponent } from './select/select.component';
     ClientListComponent,
     ClientInfoComponent,
     CNPJPipe,
+    IconComponent,
     InfoMessageComponent,
     MainHeaderComponent,
     PageHeaderComponent,
     SelectComponent,
     StatusComponent,
   ],
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
   exports: [
     ButtonComponent,
     ClientFormComponent,
     ClientListComponent,
     ClientInfoComponent,
     CNPJPipe,
+    IconComponent,
     InfoMessageComponent,
     MainHeaderComponent,
     PageHeaderComponent,

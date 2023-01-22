@@ -25,10 +25,9 @@
     opacity: 0.8;
   }
 
-  &__image {
-    + * {
-      margin-right: 2px;
-    }
+  &__icon {
+    height: 19px;
+    margin-right: 2px;
   }
 
   &__new {

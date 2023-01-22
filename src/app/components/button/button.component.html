@@ -4,12 +4,9 @@
   (click)="click()"
   class="button"
 >
-  <img
-    *ngIf="!!icon"
-    class="button__image"
-    src="assets/{{ icon }}.svg"
-    alt=""
-  >
+  <div *ngIf="!!activeIcon" class="button__icon">
+    <app-icon [name]="activeIcon" [spin]="isLoading" />
+  </div>
 
-  <ng-content *ngIf="!iconOnly" />
+  <ng-content *ngIf="!iconOnly && !isLoading" />
 </button>

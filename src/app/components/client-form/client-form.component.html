@@ -1,19 +1,19 @@
-<div class="client-form">
+<div [formGroup]="formGroup" class="client-form">
   <div class="form-field">
     <label for="name">Nome</label>
-    <input id="name" type="text" />
+    <input formControlName="name" id="name" type="text" />
   </div>
 
   <div class="form-field">
     <label for="cnpj">CNPJ</label>
-    <input id="cnpj" type="text" />
+    <input formControlName="cnpj" id="cnpj" type="text" />
   </div>
 
   <div class="form-field">
-    <app-select [values]="selectValues"/>
+    <app-select [values]="selectValues" (onSelect)="changeStatus($event)"/>
   </div>
 
   <div class="client-form__save-button">
-    <app-button role="save">Salvar</app-button>
+    <app-button [loadingActive]="true" (onClick)="addNewClient()" role="save">Salvar</app-button>
   </div>
 </div>
