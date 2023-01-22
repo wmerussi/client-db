@@ -8,6 +8,7 @@
           ariaLabel="Adicionar um novo cliente"
           [type]="isMobile ? 'round' : 'square'"
           [iconOnly]="isMobile"
+          (onClick)="addNew()"
         >Novo</app-button
         >
       </div>
