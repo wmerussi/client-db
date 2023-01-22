@@ -15,6 +15,7 @@ import { ClientFormComponent } from './client-form/client-form.component';
 import { SelectComponent } from './select/select.component';
 import { IconComponent } from './icon/icon.component';
 import { ModalComponent } from './modal/modal.component';
+import { CnpjMaskDirective } from '../directives/cnpj-mask.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ModalComponent } from './modal/modal.component';
     IconComponent,
     InfoMessageComponent,
     MainHeaderComponent,
+    CnpjMaskDirective,
     ModalComponent,
     HeadingComponent,
     SelectComponent,
@@ -41,6 +43,7 @@ import { ModalComponent } from './modal/modal.component';
     IconComponent,
     InfoMessageComponent,
     MainHeaderComponent,
+    CnpjMaskDirective,
     ModalComponent,
     HeadingComponent,
     SelectComponent,

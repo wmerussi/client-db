@@ -2,15 +2,36 @@
   <div class="form-field">
     <label for="name">Nome</label>
     <input formControlName="name" id="name" type="text" />
+
+    <span
+      *ngIf="hasError('name')"
+      class="form-field__error"
+    >Campo obrigatório</span>
   </div>
 
   <div class="form-field">
     <label for="cnpj">CNPJ</label>
-    <input formControlName="cnpj" id="cnpj" type="text" />
+    <input
+      cnpj
+      formControlName="cnpj"
+      id="cnpj"
+      type="text"
+      placeholder="000.000.000/0000-00"
+    />
+
+    <span
+      *ngIf="hasError('cnpj')"
+      class="form-field__error"
+    >Campo obrigatório</span>
   </div>
 
   <div class="form-field">
     <app-select [values]="selectValues" (onSelect)="changeStatus($event)"/>
+
+    <span
+      *ngIf="hasError('status')"
+      class="form-field__error"
+    >Campo obrigatório</span>
   </div>
 
   <div class="client-form__save-button">

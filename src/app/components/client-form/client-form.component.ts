@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { ClientForm } from 'src/app/interfaces/client-form.interface';
@@ -14,11 +14,12 @@ import { LoadingService } from 'src/app/services/loading.service';
 export class ClientFormComponent {
   public selectValues = ['Ativo', 'Inativo'];
   public showModal: boolean = false;
+  public showErrors: boolean = false;
 
   public formGroup = new FormGroup<ClientForm>({
-    name: new FormControl(),
-    cnpj: new FormControl(),
-    status: new FormControl(),
+    name: new FormControl('', [Validators.required]),
+    cnpj: new FormControl('', [Validators.required]),
+    status: new FormControl('', [Validators.required]),
   });
 
   constructor(
@@ -28,6 +29,22 @@ export class ClientFormComponent {
   ) {}
 
   addNewClient() {
+    const formHasError = Object.values(this.formGroup.controls).reduce(
+      (hasError: boolean, field: FormControl) => {
+        if (hasError) {
+          return hasError;
+        }
+
+        return !!field.errors;
+      },
+      false
+    );
+
+    if (formHasError) {
+      this.showErrors = true;
+      return;
+    }
+
     this.loadingService.show();
     const formValues = this.formGroup.value as ClientInfo;
 
@@ -36,7 +53,6 @@ export class ClientFormComponent {
       this.clientService.addNewClient(formValues).subscribe({
         next: () => {
           this.loadingService.hide();
-          this.resetForm();
           this.showModal = true;
         },
         error: () => {
@@ -51,15 +67,11 @@ export class ClientFormComponent {
     statusControl?.setValue(status);
   }
 
-  modalButtonClick() {
-    this.router.navigate(['/home']);
+  hasError(fieldName: string): boolean {
+    return this.showErrors && !!this.formGroup.get(fieldName)?.errors;
   }
 
-  private resetForm() {
-    this.formGroup.reset();
-    this.formGroup.markAsUntouched();
-    Object.keys(this.formGroup.controls).forEach((name) => {
-      this.formGroup.get(name)?.setValue('');
-    });
+  modalButtonClick() {
+    this.router.navigate(['/home']);
   }
 }

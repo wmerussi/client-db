@@ -39,7 +39,6 @@ export class ButtonComponent implements OnInit, OnDestroy {
     this.subscription = this.loadingService.isLoading.subscribe(
       (isLoading: boolean) => {
         this.isLoading = !!this.loadingActive && isLoading;
-        console.log(this.isLoading);
       }
     );
   }

@@ -2,4 +2,10 @@
   & + & {
     margin-top: space(base);
   }
+
+  &__error {
+    @include font(base);
+
+    color: color(danger);
+  }
 }
