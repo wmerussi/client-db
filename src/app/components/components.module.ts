@@ -10,10 +10,11 @@ import { StatusComponent } from './status/status.component';
 import { ButtonComponent } from './button/button.component';
 import { CNPJPipe } from '../pipes/cnpj.pipe';
 import { InfoMessageComponent } from './info-message/info-message.component';
-import { PageHeaderComponent } from './page-header/page-header.component';
+import { HeadingComponent } from './heading/heading.component';
 import { ClientFormComponent } from './client-form/client-form.component';
 import { SelectComponent } from './select/select.component';
 import { IconComponent } from './icon/icon.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { IconComponent } from './icon/icon.component';
     IconComponent,
     InfoMessageComponent,
     MainHeaderComponent,
-    PageHeaderComponent,
+    ModalComponent,
+    HeadingComponent,
     SelectComponent,
     StatusComponent,
   ],
@@ -39,7 +41,8 @@ import { IconComponent } from './icon/icon.component';
     IconComponent,
     InfoMessageComponent,
     MainHeaderComponent,
-    PageHeaderComponent,
+    ModalComponent,
+    HeadingComponent,
     SelectComponent,
     StatusComponent,
   ],

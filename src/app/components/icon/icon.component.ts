@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { StyleClass } from 'src/app/interfaces/style-class.interface';
+import { IconSize } from 'src/app/type/icon-size.type';
 import { Icon } from 'src/app/type/icon.type';
 
 @Component({
@@ -8,11 +9,13 @@ import { Icon } from 'src/app/type/icon.type';
 })
 export class IconComponent {
   @Input() name: Icon | undefined;
+  @Input() size: IconSize = 'small';
   @Input() spin: boolean = false;
 
   iconClass(): StyleClass {
     return {
       'icon--spin': this.spin,
+      [`icon--${this.size}`]: !!this.size,
     };
   }
 }

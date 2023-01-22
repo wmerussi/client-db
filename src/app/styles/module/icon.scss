@@ -1,6 +1,13 @@
 .icon {
-  width: 19px;
-  height: 19px;
+  &--small {
+    width: 19px;
+    height: 19px;
+  }
+
+  &--medium {
+    width: 25px;
+    height: 25px;
+  }
 
   &--spin {
     animation: spin 1.5s linear infinite;

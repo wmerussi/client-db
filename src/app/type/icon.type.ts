@@ -1,1 +1,1 @@
-export type Icon = 'plus' | 'spinner';
+export type Icon = 'check' | 'person' | 'plus' | 'spinner';

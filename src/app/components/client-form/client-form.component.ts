@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+
 import { ClientForm } from 'src/app/interfaces/client-form.interface';
 import { ClientInfo } from 'src/app/interfaces/client-info.interface';
 import { ClientService } from 'src/app/services/client.service';
@@ -11,6 +13,7 @@ import { LoadingService } from 'src/app/services/loading.service';
 })
 export class ClientFormComponent {
   public selectValues = ['Ativo', 'Inativo'];
+  public showModal: boolean = false;
 
   public formGroup = new FormGroup<ClientForm>({
     name: new FormControl(),
@@ -20,7 +23,8 @@ export class ClientFormComponent {
 
   constructor(
     private clientService: ClientService,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private router: Router
   ) {}
 
   addNewClient() {
@@ -33,6 +37,7 @@ export class ClientFormComponent {
         next: () => {
           this.loadingService.hide();
           this.resetForm();
+          this.showModal = true;
         },
         error: () => {
           this.loadingService.hide();
@@ -44,6 +49,10 @@ export class ClientFormComponent {
   changeStatus(status: string) {
     const statusControl = this.formGroup.get('status');
     statusControl?.setValue(status);
+  }
+
+  modalButtonClick() {
+    this.router.navigate(['/home']);
   }
 
   private resetForm() {

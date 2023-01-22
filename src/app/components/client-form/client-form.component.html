@@ -17,3 +17,5 @@
     <app-button [loadingActive]="true" (onClick)="addNewClient()" role="save">Salvar</app-button>
   </div>
 </div>
+
+<app-modal *ngIf="showModal" text="Cliente incluído com sucesso." (onButtonClick)="modalButtonClick()" />
