@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 
 import { StyleClass } from 'src/app/interfaces/style-class.interface';
+import { Status } from 'src/app/type/status.type';
 
 @Component({
   selector: 'app-select',
@@ -16,6 +17,11 @@ import { StyleClass } from 'src/app/interfaces/style-class.interface';
 })
 export class SelectComponent {
   @Input() values: string[] = [];
+
+  @Input() set initialValue(value: string) {
+    this.emitValue(value);
+  }
+
   @Output() onSelect: EventEmitter<string> = new EventEmitter<string>();
 
   @ViewChild('select') selectEl: ElementRef | undefined;
@@ -48,9 +54,12 @@ export class SelectComponent {
   }
 
   selectValue(value: string) {
-    this.selectedValue = value;
+    this.emitValue(value);
     this.selectEl?.nativeElement.focus();
+  }
 
+  emitValue(value: string) {
+    this.selectedValue = value;
     this.onSelect.emit(this.selectedValue);
   }
 

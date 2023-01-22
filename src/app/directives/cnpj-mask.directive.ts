@@ -1,14 +1,23 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import {
+  AfterViewInit,
+  Directive,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 
 @Directive({
   selector: '[cnpj]',
 })
-export class CnpjMaskDirective {
+export class CnpjMaskDirective implements AfterViewInit {
   @HostListener('keyup') onKeyUp() {
     this.applyCnpjMask();
   }
 
   constructor(private el: ElementRef) {}
+
+  ngAfterViewInit() {
+    this.applyCnpjMask();
+  }
 
   applyCnpjMask() {
     const value = this.el.nativeElement.value.replace(/[\D\/\-\.]/g, '');

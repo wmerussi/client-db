@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { ClientInfo } from 'src/app/interfaces/client-info.interface';
 import { LoadingService } from 'src/app/services/loading.service';
 
@@ -11,5 +12,11 @@ export class ClientInfoComponent {
 
   public isLoading = this.loadingService.isLoading;
 
-  constructor(private loadingService: LoadingService) {}
+  constructor(private loadingService: LoadingService, private router: Router) {}
+
+  edit() {
+    this.router.navigate(['/editar'], {
+      queryParams: { id: this.clientInfo?.id },
+    });
+  }
 }

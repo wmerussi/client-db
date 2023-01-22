@@ -13,6 +13,20 @@ export class ClientService {
 
   constructor(private database: DatabaseService, private http: HttpClient) {}
 
+  get(id: number): Observable<ClientInfo | undefined> {
+    const storedClients = this.database.get<ClientInfo[]>(this.databaseName);
+
+    if (!storedClients) {
+      return of(undefined);
+    }
+
+    const clientInfo = storedClients.find(
+      (client: ClientInfo) => client.id === +id
+    );
+
+    return of(clientInfo);
+  }
+
   getAll(): Observable<ClientInfo[]> {
     const storedClients = this.database.get<ClientInfo[]>(this.databaseName);
 
@@ -28,7 +42,7 @@ export class ClientService {
     );
   }
 
-  addNewClient(clientInfo: ClientInfo): Observable<any> {
+  addNewClient(clientInfo: ClientInfo): Observable<undefined> {
     const storedClients =
       this.database.get<ClientInfo[]>(this.databaseName) || [];
 
@@ -37,10 +51,39 @@ export class ClientService {
     this.database.set<ClientInfo[]>(this.databaseName, [
       ...storedClients,
       {
-        id,
         ...clientInfo,
+        id,
       },
     ]);
+
+    return of(undefined);
+  }
+
+  editClient(clientInfo: ClientInfo): Observable<undefined> {
+    const storedClients = (
+      this.database.get<ClientInfo[]>(this.databaseName) || []
+    ).filter((client: ClientInfo) => client.id !== Number(clientInfo?.id));
+
+    const updatedClients = [...storedClients, clientInfo];
+
+    updatedClients.sort((a: ClientInfo, b: ClientInfo) => {
+      if (!a.id || !b.id) {
+        debugger;
+        return 0;
+      }
+
+      if (a.id > b.id) {
+        return 1;
+      }
+
+      if (a.id < b.id) {
+        return -1;
+      }
+
+      return 0;
+    });
+
+    this.database.set<ClientInfo[]>(this.databaseName, updatedClients);
 
     return of(undefined);
   }

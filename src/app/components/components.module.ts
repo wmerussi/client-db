@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ClientInfoComponent } from './client-info/client-info.component';
@@ -34,7 +34,13 @@ import { RouterModule } from '@angular/router';
     SelectComponent,
     StatusComponent,
   ],
-  imports: [CommonModule, HttpClientModule, ReactiveFormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    RouterModule,
+  ],
   exports: [
     ButtonComponent,
     ClientFormComponent,

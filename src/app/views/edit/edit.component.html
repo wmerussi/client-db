@@ -1,0 +1,11 @@
+<div class="add container">
+  <app-heading title="Editar Cliente" />
+
+  <app-client-form
+    *ngIf="!!clientInfo"
+    [clientInfo]="clientInfo"
+    (onSubmit)="submit($event)"
+  />
+</div>
+
+<app-modal *ngIf="showModal" text="Cliente atualizado com sucesso." (onButtonClick)="modalButtonClick()" />

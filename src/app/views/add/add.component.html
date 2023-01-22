@@ -1,5 +1,7 @@
 <div class="add container">
   <app-heading title="Novo Cliente" />
 
-  <app-client-form />
+  <app-client-form (onSubmit)="submit($event)"/>
 </div>
+
+<app-modal *ngIf="showModal" text="Cliente incluído com sucesso." (onButtonClick)="modalButtonClick()" />
