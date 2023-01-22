@@ -1,0 +1,12 @@
+label {
+  @include font(large);
+
+  display: block;
+}
+
+input {
+  &[type="text"] {
+    @include font(large);
+    @extend %input;
+  }
+}

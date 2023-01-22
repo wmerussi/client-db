@@ -1,0 +1,48 @@
+.select {
+  @extend %input;
+
+  width: 100%;
+  text-align: left;
+  user-select: none;
+
+  &:focus,
+  &--outline {
+    border: 2px solid color(dark);
+    border-radius: border-radius(round);
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__list {
+    @extend %input;
+
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    padding: 0;
+
+    &--open {
+      display: block;
+    }
+  }
+
+  &__item {
+    padding: space(small);
+    cursor: pointer;
+
+    &:hover {
+      background-color: color(light, light);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: space(base);
+    transform: translateY(-50%);
+  }
+}

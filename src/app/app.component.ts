@@ -17,9 +17,9 @@ export class AppComponent implements OnInit {
   @HostListener('window:resize', [])
   private onWindowResize() {
     const width = window.innerWidth;
-    console.log(width);
     const size: ScreenSize =
       width < 768 ? 'mobile' : width < 1025 ? 'tablet' : 'desktop';
+
     this.screenService.resize.next(size);
   }
 }

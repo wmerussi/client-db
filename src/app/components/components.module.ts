@@ -11,6 +11,7 @@ import { CNPJPipe } from '../pipes/cnpj.pipe';
 import { InfoMessageComponent } from './info-message/info-message.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { ClientFormComponent } from './client-form/client-form.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ClientFormComponent } from './client-form/client-form.component';
     InfoMessageComponent,
     MainHeaderComponent,
     PageHeaderComponent,
+    SelectComponent,
     StatusComponent,
   ],
   imports: [CommonModule, HttpClientModule],
@@ -34,6 +36,7 @@ import { ClientFormComponent } from './client-form/client-form.component';
     InfoMessageComponent,
     MainHeaderComponent,
     PageHeaderComponent,
+    SelectComponent,
     StatusComponent,
   ],
 })

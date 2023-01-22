@@ -2,20 +2,4 @@
   & + & {
     margin-top: space(base);
   }
-
-  &__label,
-  &__input {
-    @include font(large);
-  }
-
-  &__label {
-    display: block;
-  }
-
-  &__input {
-    padding: space(small);
-    width: 100%;
-    border: 1px solid color(light, dark);
-    color: color(dark, light);
-  }
 }

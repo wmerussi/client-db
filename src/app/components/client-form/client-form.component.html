@@ -1,17 +1,16 @@
 <div class="client-form">
   <div class="form-field">
-    <label class="form-field__label" for="name">Nome</label>
-    <input class="form-field__input" id="name" type="text" />
+    <label for="name">Nome</label>
+    <input id="name" type="text" />
   </div>
 
   <div class="form-field">
-    <label class="form-field__label" for="cnpj">CNPJ</label>
-    <input class="form-field__input" id="cnpj" type="text" />
+    <label for="cnpj">CNPJ</label>
+    <input id="cnpj" type="text" />
   </div>
 
   <div class="form-field">
-    <label class="form-field__label" for="status">Status</label>
-    <input class="form-field__input" id="status" type="text" />
+    <app-select [values]="selectValues"/>
   </div>
 
   <div class="client-form__save-button">

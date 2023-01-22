@@ -1,0 +1,30 @@
+<label for="status">Status</label>
+
+<div class="select__wrapper">
+  <button
+    #select
+    (click)="toggleList()"
+    [ngClass]="selectClass()"
+    id="status"
+    class="select"
+  >
+    {{ selectedValue || "&nbsp;" }}
+  </button>
+
+  <img
+    class="select__icon"
+    src="assets/triangle-down.svg"
+    aria-hidden="true"
+    alt=""
+  />
+
+  <ul class="select__list" [ngClass]="listClass()">
+    <li
+      *ngFor="let value of values"
+      (click)="selectValue(value)"
+      class="select__item"
+    >
+      {{ value }}
+    </li>
+  </ul>
+</div>

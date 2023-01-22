@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './client-form.component.html',
 })
 export class ClientFormComponent {
-  //
+  public selectValues = ['Ativo', 'Inativo'];
 }

@@ -1,0 +1,10 @@
+%input {
+  @include font(large);
+
+  padding: space(small);
+  width: 100%;
+
+  background-color: color(light);
+  border: 1px solid color(light, dark);
+  color: color(dark, light);
+}
