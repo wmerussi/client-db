@@ -1,27 +1,4 @@
 .client-list {
-  &__wrapper {
-    padding: {
-      top: space(large);
-      bottom: space(xxlarge);
-    }
-  }
-
-  &__header {
-    @include font(xlarge);
-
-    display: flex;
-    margin-bottom: space(xlarge);
-    padding: 0 space(base);
-    border-bottom: 1px solid color(dark, light);
-  }
-
-  &__heading {
-    margin: {
-      right: auto;
-      left: space(base);
-    }
-  }
-
   &__item {
     & + & {
       margin-top: space(small);
@@ -30,26 +7,5 @@
 
   &__message {
     margin-top: space(large);
-  }
-
-  &__add-button {
-    position: fixed;
-    right: space(large);
-    bottom: space(large);
-    z-index: 9;
-  }
-
-  @include media(tablet) {
-    &__wrapper {
-      padding-top: space(xxlarge);
-    }
-
-    &__header {
-      @include font(xxlarge);
-    }
-
-    &__add-button {
-      position: initial;
-    }
   }
 }

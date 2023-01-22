@@ -1,0 +1,21 @@
+.page-header {
+  @include font(xlarge);
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: space(xlarge);
+  padding: 0 space(base) space(xsmall);
+  border-bottom: 1px solid color(dark, light);
+
+  &__heading {
+    margin: {
+      right: auto;
+      left: space(base);
+    }
+  }
+
+  @include media(tablet) {
+    @include font(xxlarge);
+  }
+}

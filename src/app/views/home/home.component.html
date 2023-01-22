@@ -1,2 +1,18 @@
-<app-main-header />
-<app-client-list />
+<div class="home">
+  <div class="container">
+    <app-page-header title="Listagem de Clientes">
+      <div class="home__add-button">
+        <app-button
+          role="new"
+          icon="plus"
+          ariaLabel="Adicionar um novo cliente"
+          [type]="isMobile ? 'round' : 'square'"
+          [iconOnly]="isMobile"
+        >Novo</app-button
+        >
+      </div>
+    </app-page-header>
+  </div>
+
+  <app-client-list />
+</div>
