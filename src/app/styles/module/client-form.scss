@@ -1,13 +1,22 @@
 .client-form {
   display: flex;
   flex-direction: column;
-  width: 312px;
+  width: 100%;
 
   &__save-button {
     align-self: flex-end;
+    width: 100%;
 
     margin: {
       top: space(xlarge);
+    }
+  }
+
+  @include media(tablet) {
+    width: 312px;
+
+    &__save-button {
+      width: auto;
     }
   }
 }

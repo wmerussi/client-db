@@ -11,9 +11,9 @@ import { Subscription } from 'rxjs';
 
 import { StyleClass } from 'src/app/interfaces/style-class.interface';
 import { LoadingService } from 'src/app/services/loading.service';
-import { ButtonRole } from 'src/app/type/button-role.type';
-import { ButtonType } from 'src/app/type/button-type.type';
-import { Icon } from 'src/app/type/icon.type';
+import { ButtonRole } from 'src/app/types/button-role.type';
+import { ButtonType } from 'src/app/types/button-type.type';
+import { Icon } from 'src/app/types/icon.type';
 
 @Component({
   selector: 'app-button',

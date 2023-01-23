@@ -16,11 +16,14 @@
   }
 
   &__icon {
-    margin-bottom: 10px;
     height: 25px;
   }
 
   @include media(tablet) {
     @include font(xxlarge);
+
+    &__icon {
+      margin-bottom: 10px;
+    }
   }
 }

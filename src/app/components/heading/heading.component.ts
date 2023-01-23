@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Icon } from 'src/app/type/icon.type';
+import { Icon } from 'src/app/types/icon.type';
 
 @Component({
   selector: 'app-heading',

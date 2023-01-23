@@ -1,4 +1,4 @@
-import { Status } from '../type/status.type';
+import { Status } from '../types/status.type';
 
 export interface ClientInfo {
   id?: number;

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ScreenSize } from '../type/screen-size.type';
+import { ScreenSize } from '../types/screen-size.type';
 
 @Injectable({ providedIn: 'root' })
 export class ScreenService {

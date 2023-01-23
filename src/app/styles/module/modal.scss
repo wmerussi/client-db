@@ -8,7 +8,7 @@
   flex-direction: column;
 
   padding: space(base);
-  width: 400px;
+  width: 95%;
 
   background-color: color(light);
   border: 1px solid color(light, dark);
@@ -36,5 +36,14 @@
 
   &__button {
     align-self: flex-end;
+    width: 100%;
+  }
+
+  @include media(tablet) {
+    width: 400px;
+
+    &__button {
+      width: auto;
+    }
   }
 }

@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ScreenService } from './services/screen.service';
-import { ScreenSize } from './type/screen-size.type';
+import { ScreenSize } from './types/screen-size.type';
 
 @Component({
   selector: 'app-root',

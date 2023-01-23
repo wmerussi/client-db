@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 
 import { StyleClass } from 'src/app/interfaces/style-class.interface';
-import { Status } from 'src/app/type/status.type';
+import { Status } from 'src/app/types/status.type';
 
 @Component({
   selector: 'app-select',
